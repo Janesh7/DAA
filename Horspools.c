@@ -16,11 +16,11 @@ int horspoolmatch(char p[],int m,char t[],int n)
   shifttable(p,m);
   for(i=m-1;i<n;i+=table[t[i]])
   {
-  k=0;  
-  while(k<m&&p[m-1-k]==t[i-k])
-    k++;
-  if(k==m)
-    return i-m+1;
+    k=0;  
+    while(k<m&&p[m-1-k]==t[i-k])
+      k++;
+    if(k==m)
+      return i-m+1;
   }
   return -1;
 }
